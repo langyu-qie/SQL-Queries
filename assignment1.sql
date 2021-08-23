@@ -38,7 +38,7 @@ NAME: HL Crankarm  --  COLOR: Black
 NAME: Chainring Bolts  --  COLOR: Silver
 NAME: Chainring Nut  --  COLOR: Silver
 NAME: Chainring  --  COLOR: Black
-    ………
+    â€¦â€¦â€¦
 */
 SELECT 'Name: '+Name+' -- COLOR: '+Color AS [Name And Color]
 FROM Production.Product
@@ -106,7 +106,7 @@ FROM Production.Product
 Order BY Color DESC
 
 --15 retrieves the unique combination of columns ProductSubcategoryID and Color from the Production.Product table. Format and sort so the result set accordingly to the following. We do not want any rows that are NULL.in any of the two columns in the result.
-SELECT ProductSubcategoryID, Color
+SELECT DISTINCT ProductSubcategoryID, Color
 FROM Production.Product
 WHERE ProductSubcategoryID IS NOT NULL AND Color is not null
 GROUP BY ProductSubcategoryID, Color
